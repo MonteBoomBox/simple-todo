@@ -1,0 +1,77 @@
+:root {
+    --sidebar-width: 250px;
+    --toggle-size: 30px;
+
+    --accent: #4583ff;
+}
+
+.title-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.title-bar .title {
+    margin-bottom: 0;
+    font-size: 1.6rem;
+}
+
+.tasks {
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+.task {
+    padding: 1rem 0rem 1rem 0;
+    border-bottom: 1px solid #cecece;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+}
+
+.toggle {
+    appearance: none;
+    width: var(--toggle-size);
+    height: var(--toggle-size);
+    border: 1px solid #737373;
+    border-radius: 50%;
+    transition: 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.toggle:checked {
+    background-color: var(--accent);
+    border: none;
+}
+
+.toggle::before {
+    font: var(--fa-font-solid);
+    content: "\f00c";
+    font-size: 1rem;
+    visibility: hidden;
+    color: white;
+}
+
+.toggle:checked::before {
+    visibility: visible;
+}
+
+:focus-visible {
+    outline: none;
+}
+
+.headline {
+    text-align: center;
+    margin: 5rem 0;
+}
+
+@media screen and (max-width: 600px) {
+    .buttons {
+        margin-left: 0 !important;
+        margin-top: 1rem;
+    }
+}
