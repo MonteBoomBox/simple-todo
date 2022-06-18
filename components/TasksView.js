@@ -34,6 +34,14 @@ var TasksView = {
                 ])
             ]),
         ]
+    },
+    oncreate: () => {
+        var list = document.querySelector(".tasks")
+        var sortable = Sortable.create(list, {
+            animation: 150,
+            ghostClass: "none",
+            sort: true
+        })
     }
 }
     
