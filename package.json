@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack ./index.js --output-path bin --output-filename app.js --watch --mode development",
-    "build": "webpack ./index.js --output-path bin --output-filename app.js"
+    "build": "webpack ./index.js --output-path bin --output-filename app.js --mode production"
   },
   "keywords": [],
   "author": "",
