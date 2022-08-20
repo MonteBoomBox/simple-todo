@@ -10,6 +10,7 @@ var TasksView = {
             m(".p-6", [
                 m(".title-bar", [
                     m("p.title", "SimpleTODO"),
+                    m("p.title", process.env.MY_AWESOME_KEY),
                     m(".buttons.ml-auto", [
                         m("button.button.is-responsive.is-danger.is-outlined", { onclick: () => Data.removeAll() }, [
                             m("i.fas.fa-trash.mr-2"),
