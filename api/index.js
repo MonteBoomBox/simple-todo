@@ -7,8 +7,7 @@ app.get("/api/test", (req, res) => {
     axios.get("https://jsonplaceholder.typicode.com/todos/1").then((res) => {
         res.send(res.data)
     }).catch((err) => {
-        console.error(err)
-        res.status(500).send("Server Error")
+        res.status(500).send(err)
     })
     
     // res.send("API working successfully!")
