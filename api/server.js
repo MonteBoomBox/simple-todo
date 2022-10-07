@@ -1,7 +1,7 @@
 var express = require("express")
 var app = express()
 
-app.get("/api", (req, res) => {
+app.get("/api/test", (req, res) => {
     res.send("API working successfully!")
 })
 
