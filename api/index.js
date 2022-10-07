@@ -1,8 +1,17 @@
+const axios = require("axios").default
 var express = require("express")
 var app = express()
 
 app.get("/api/test", (req, res) => {
-    res.send("API working successfully!")
+    
+    axios.get("https://jsonplaceholder.typicode.com/todos/1").then((res) => {
+        res.send(res.data)
+    }).catch((err) => {
+        console.error(err)
+        res.status(500).send("Server Error")
+    })
+    
+    // res.send("API working successfully!")
 })
 
 // const PORT = 8000
