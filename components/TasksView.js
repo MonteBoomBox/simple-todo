@@ -5,6 +5,7 @@ var TasksView = {
     oninit: () => {
         Data.getTasks()
     },
+    // Added line for CloudFlare re-deploy
     view: function(vnode) {
         return [
             m(".p-6", [
